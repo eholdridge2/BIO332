@@ -1,0 +1,24 @@
+---
+title: "Example RMarkdown"
+author: "Matthew Healy"
+date: '2022-09-14'
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+```
+[Class Github](https://github.com/eholdridge2/BIO332)
+
+```{r, fig.width = 4, fig.height = 3}
+A <- c("a", "a", "b", "b")
+B <- c(5, 10, 15, 20)
+dataframe <- data.frame(A, B)
+print(dataframe)
+boxplot(B~A,data=dataframe)
+kable(dataframe, digits = 2)
+```
+
